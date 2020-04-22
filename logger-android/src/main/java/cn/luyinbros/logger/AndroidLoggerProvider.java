@@ -27,7 +27,7 @@ public class AndroidLoggerProvider implements LoggerProvider {
         INFO,
         WARN,
         ERROR,
-        NONE;
+        NONE
     }
 
     public static class Builder {
@@ -199,8 +199,6 @@ public class AndroidLoggerProvider implements LoggerProvider {
 
 
             final int traceLength = trace.length;
-            System.out.println(methodName);
-         //   final String targetName = "com.zh.im.core.logger.AndroidLoggerProvider$LoggerImpl.printInfo";
             String currentTargetName;
             int findStackIndex = -1;
             for (int index = 0; index < traceLength; index++) {
