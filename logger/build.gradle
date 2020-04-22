@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = GROUP
+version = VERSION
+
+dependencies {}
+
+
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+
+apply from: rootProject.file('gradle/javaUpload.gradle')

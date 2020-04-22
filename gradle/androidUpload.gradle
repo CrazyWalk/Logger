@@ -1,0 +1,25 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = GROUP
+version = VERSION
+
+task sourcesJar(type: Jar) {
+    classifier  'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier 'javadoc'
+    from javadoc.destinationDir
+}
+
+task classesJar(type: Jar) {
+    from "$buildDir/intermediates/javac/debug/classes/"
+}
+
+artifacts {
+    archives classesJar
+    archives javadocJar
+    archives sourcesJar
+}

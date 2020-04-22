@@ -1,0 +1,4 @@
+rootProject.name='Logger'
+include ':app'
+include ':logger'
+include ':logger-android'
